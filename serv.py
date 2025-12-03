@@ -49,7 +49,7 @@ def receive_data():
         print("Повні дані:")
         print(json.dumps(data, indent=4, ensure_ascii=False))
         print("----------------------------")
-
+        print(data)
         #   b) У лог-файл (записуємо як один рядок JSON)
         logging.info(json.dumps(data, ensure_ascii=False))
 
@@ -75,3 +75,4 @@ if __name__ == '__main__':
     print("Кінцева точка для POST-запитів: /system-reports")
 
     app.run(debug=False, host='0.0.0.0')
+
